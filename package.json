@@ -1,10 +1,16 @@
 {
   "name": "mongo-auth",
-  "description": "Mongo based authentication",
+  "description": "log in/out functions for mongo based web apps on nodejs",
   "keywords": [
     "authentication",
+    "node",
     "mongodb"
   ],
+  "directories": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tejohnso/mongo-auth.git"
+  },
   "version": "0.0.1",
   "author": {
     "name": "Tyler Johnson",
