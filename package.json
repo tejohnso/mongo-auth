@@ -1,0 +1,15 @@
+{
+  "name": "mongo-auth",
+  "description": "Mongo based authentication",
+  "keywords": [
+    "authentication",
+    "mongodb"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "Tyler Johnson",
+    "email": "tejohnso@rogers.com"
+  },
+  "main": "lib/mongo-auth.js",
+  "readme": "log in/out functions for mongo based web apps"
+}
