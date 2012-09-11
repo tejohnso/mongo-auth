@@ -15,11 +15,11 @@
   "dependencies": {
     "bcrypt": ""
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "Tyler Johnson",
     "email": "tejohnso@rogers.com"
   },
   "main": "lib/mongo-auth.js",
-  "readme": "log in/out functions for mongo based web apps"
+  "readme": "see https://github.com/tejohnso/mongo-auth"
 }
