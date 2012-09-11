@@ -1,17 +1,21 @@
 {
   "name": "mongo-auth",
-  "description": "log in/out functions for mongo based web apps on nodejs",
+  "description": "User authentication and CRUD routines for express.",
   "keywords": [
     "authentication",
     "node",
-    "mongodb"
+    "mongodb",
+    "mongo"
   ],
   "directories": "lib",
   "repository": {
     "type": "git",
     "url": "git@github.com:tejohnso/mongo-auth.git"
   },
-  "version": "0.0.1",
+  "dependencies": {
+    "bcrypt": ""
+  },
+  "version": "0.0.3",
   "author": {
     "name": "Tyler Johnson",
     "email": "tejohnso@rogers.com"
