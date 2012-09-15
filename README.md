@@ -41,6 +41,15 @@ app.get('/createTestUser', function(request, response) {
       response.end(' user has been set\n' + JSON.stringify(user));
    });
 });
+
+app.get('/fetchTestUser', function(request, response) {
+   auth.getUser(request.sessionStore, 'testuser', function(err, user) {
+      if (err) {console.log('error testing user:\n' +err); response.end('error'); return;}
+      if (user === null) {response.end('user not found'); return;}
+      response.end(JSON.stringify(user));
+   });
+});
+
 ```
 
 
@@ -48,7 +57,7 @@ API:
 ====
 
 auth.checkLogin
------------------
+---------------
    Compares browser username and password against the configured mongodb collection.  If a match is found, request.session.loggedin is set to true and a browser response is sent back.
    
    If the options.response message begins with / then response.redirect(message) is called.   
@@ -62,7 +71,7 @@ This option is intended to be used with an AJAX call from the browser to the log
    
 
 auth.setUser(store, user, fields, callback)
---------------------------
+-------------------------------------------
    Create a new user, modify fields for an existing user, or delete an existing user.   
    
    store - The session store (i.e. request.sessionStore - should contain _db)   
@@ -72,6 +81,17 @@ auth.setUser(store, user, fields, callback)
                         - err will contain an error message if an error ocurred otherwise null.   
                         - user will contain the new user document as an object, or null if the user was removed.    
 
+auth.getUser(store, user, callback)
+-----------------------------------
+   Retrieve a user document   
 
+   store - The session store (i.e. request.sessionStore - should contain _db)   
+   user - The name of the target user   
+   callback(err, user) - A callback that will be called after getUser attempts to complete its work.   
+                       - err will contain an error message if an error ocurred otherwise null.   
+                       - user will contain the new user document as an object, or null if the user was not found.   
+
+
+   
 
 
