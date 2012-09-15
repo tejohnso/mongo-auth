@@ -10,8 +10,8 @@ NPM Dependencies:
    bcrypt 
 
 Express dependencies:
-   session handling with mongodb as the session store (eg: connect-session-mongo)
-   request.sessionStore should exist and should contain a _db object
+   session handling with mongodb as the session store (eg: connect-session-mongo)   
+   request.sessionStore should exist and should contain an object named _db    
    
 To use:
    Pass a configuration object to mongo-auth otherwise defaults will be used.
@@ -70,7 +70,7 @@ auth.setUser(store, user, fields, callback)
    fields - null to delete the user, or an object containing the field names and values (eg: {"email": "me@localhost.com", "password": "secret"})   
    callback(err, user) - A callback that will be called after setUser attempts to complete its work.  
                         - err will contain an error message if an error ocurred otherwise null.   
-                        - User will contain the new user document as an object, or null if the user was removed.    
+                        - user will contain the new user document as an object, or null if the user was removed.    
 
 
 
