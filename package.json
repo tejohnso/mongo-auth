@@ -15,7 +15,7 @@
   "dependencies": {
     "bcrypt": "x"
   },
-  "version": "0.0.9",
+  "version": "0.1.0",
   "author": {
     "name": "Tyler Johnson",
     "email": "tejohnso@rogers.com"
